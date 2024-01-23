@@ -10,6 +10,7 @@ import todoRouter from './routes/todo.route.js'
 dotenv.config()
 // initialize express app
 const app = express()
+app.use(express.json());
 app.use('/todo', todoRouter)
 
 app.listen(process.env.PORT, () =>{
