@@ -1,4 +1,5 @@
-import React from "react";
+import { RiDeleteBin5Line } from "react-icons/ri";
+import { FaRegEdit } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -20,9 +21,10 @@ const Home = () => {
           <h3 className='text-semibold truncate'>
             Iron out the bug in my code
           </h3>
-          <div className='flex gap-2'>
-            <p>Edit</p>
-            <p>Delete</p>
+          <div className='flex gap-2 cursor-pointer items-center'>
+        <input type="checkbox" name="completed"  className="text-2xl cursor-pointer"/>
+          <RiDeleteBin5Line className='text-red-700' />
+            <FaRegEdit className='text-green-700'/>
           </div>
         </div>
         
