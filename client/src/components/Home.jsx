@@ -15,14 +15,17 @@ const Home = () => {
         </button>
       </div>
       <div className='flex flex-col flex-1'>
-        <h2>Hello world</h2>
-        <h2>Hello world</h2>
-        <h2>Hello world</h2>
-        <h2>Hello world</h2>
-        <h2>Hello world</h2>
-        <h2>Hello world</h2>
-        <h2>Hello world</h2>
-        <h2>Hello world</h2>
+        <h2 className='mx-auto my-7 text-green-700'>TODOS</h2>
+        <div className='flex justify-between bg-slate-200 p-3 rounded-lg'>
+          <h3 className='text-semibold truncate'>
+            Iron out the bug in my code
+          </h3>
+          <div className='flex gap-2'>
+            <p>Edit</p>
+            <p>Delete</p>
+          </div>
+        </div>
+        
       </div>
     </main>
   );
