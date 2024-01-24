@@ -2,16 +2,19 @@ import express from 'express';
 import mongoose from 'mongoose'
 import dotenv from "dotenv"
 import todoRouter from './routes/todo.route.js'
-
-// fecthing from .env file
-// const port = process.env.PORT
-// const db = process.env.MONGO_DB
+import cors from 'cors'
 
 dotenv.config()
-// initialize express app
+
 const app = express()
+
 app.use(express.json());
-app.use('/todo', todoRouter)
+app.use(cors())
+app.use(express.urlencoded({ extended: false }));
+
+
+app.use('/api/todo', todoRouter)
+
 
 app.listen(process.env.PORT, () =>{
     console.log(`server is running on  ${process.env.PORT}`)
