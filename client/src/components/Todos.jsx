@@ -16,16 +16,16 @@ const Todos = ({todo, setTodos}) => {
     <>
      {/* <h2 className='mx-auto my-7 text-green-700'>TODOS</h2> */}
     <div className='flex justify-between bg-slate-200 p-3 rounded-lg my-1'>          
-          <h3 className='text-semibold truncate'>
+          <h3 className={`text-semibold truncate ${todo.completed ? 'line-through': ''}`}>
             {todo && todo.title}
           </h3>
           <div className='flex gap-2 cursor-pointer items-center'>
-            <input
-              checked={todo.completed}
+            {!todo.completed && <input
+              // checked={todo.completed}
               type='checkbox'
               name='completed'
               className='text-2xl cursor-pointer'
-            />
+            />}
             <RiDeleteBin5Line className='text-red-700'  onClick={()=>handleDelete(todo._id)}/>
             <FaRegEdit className='text-green-700' />
           </div>
