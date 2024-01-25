@@ -96,7 +96,7 @@ const Home = () => {
       <div className='flex flex-col flex-1 mb-4'>
         <h2 className='mx-auto my-7 text-green-700'>TODOS</h2>
        { todos.map((todo)=>(
-          <Todos todo={todo}/>
+          <Todos todo={todo} setTodos={setTodos}/>
         ))}        
       </div>
     </main>
